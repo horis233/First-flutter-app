@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/horis/Documents/MY PROJECTS/fullter-app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "347"
+                    }
+                }
+            ]
+        }
+    ]
+}
