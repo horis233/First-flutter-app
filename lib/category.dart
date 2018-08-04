@@ -48,24 +48,37 @@ class Category extends StatelessWidget {
       color: Colors.transparent,
       child: Container(
         height: _rowHeight,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Icon(
-                iconLocation,
-                size: 60.0,
-              ),
+        child: InkWell(
+          borderRadius: _borderRadius,
+          highlightColor: color,
+          splashColor: color,
+          // We can use either the () => function() or the () { function(); }
+          // syntax.
+          onTap: () {
+            print('I was tapped!');
+          },
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Icon(
+                    iconLocation,
+                    size: 60.0,
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    name,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.headline,
+                  ),
+                )
+              ],
             ),
-            Center(
-              child: Text(
-                name,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline,
-              ),
-            )
-          ],
+          ),
         ),
       ),
     );
