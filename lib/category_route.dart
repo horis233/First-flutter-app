@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:solution_03_category_route/category.dart';
+import 'category.dart';
 
 final _backgroundColor = Colors.green[100];
 
