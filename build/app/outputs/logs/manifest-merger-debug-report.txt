@@ -8,7 +8,7 @@ INJECTED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main
 INJECTED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:1:1-39:12
 INJECTED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:1:1-39:12
 	package
-		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:2:5-51
+		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:2:5-56
 		INJECTED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -28,12 +28,12 @@ ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/An
 application
 ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:15:5-38:19
 	android:label
-		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:17:9-48
+		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:17:9-53
 	android:icon
 		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:18:9-43
 	android:name
 		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:16:9-57
-activity#com.yourcompany.task02categorywidget.MainActivity
+activity#com.yourcompany.solution05statefulwidgets.MainActivity
 ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:19:9-37:20
 	android:launchMode
 		ADDED from /home/horis/Documents/MY PROJECTS/fullter-app/android/app/src/main/AndroidManifest.xml:21:13-43

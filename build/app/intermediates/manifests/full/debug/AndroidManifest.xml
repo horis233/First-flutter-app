@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yourcompany.task02categorywidget"
+    package="com.yourcompany.solution05statefulwidgets"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -25,9 +25,9 @@
         android:name="io.flutter.app.FlutterApplication"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="task_02_category_widget" >
+        android:label="solution_05_stateful_widgets" >
         <activity
-            android:name="com.yourcompany.task02categorywidget.MainActivity"
+            android:name="com.yourcompany.solution05statefulwidgets.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

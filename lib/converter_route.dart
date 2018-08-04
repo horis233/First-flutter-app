@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import 'unit.dart';
+import 'package:flutter_app/unit.dart';
 
 /// Converter screen where users can input amounts to convert.
 ///

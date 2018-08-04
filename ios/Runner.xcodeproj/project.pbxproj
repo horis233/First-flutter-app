@@ -382,7 +382,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.task02CategoryWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.solution05StatefulWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -404,7 +404,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.task02CategoryWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.solution05StatefulWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

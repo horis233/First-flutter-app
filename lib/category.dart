@@ -6,6 +6,8 @@
 // https://www.dartlang.org/guides/language/effective-dart/style#ordering
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import 'package:flutter_app/unit.dart';
+import 'package:flutter_app/converter_route.dart';
 
 /// A custom [Category] widget.
 ///
@@ -25,18 +27,47 @@ class Category extends StatelessWidget {
   final String name;
   final ColorSwatch color;
   final IconData iconLocation;
+  final List<Unit> units;
+
+
   const Category({
     Key key,
     @required this.name,
     @required this.color,
     @required this.iconLocation,
+    @required this.units,
 }) : assert(name != null),
+     assert(units != null),
      assert(color != null),
      assert(iconLocation != null),
      super(key:key);
 
   /// Builds a custom widget that shows [Category] information.
   ///
+  ///
+  void _navigateToConverter(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute<Null>(
+      builder: (BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            elevation: 1.0,
+            title: Text(
+              name,
+              style: Theme.of(context).textTheme.display1,
+            ),
+            centerTitle: true,
+            backgroundColor: color,
+          ),
+          body: ConverterRoute(
+            color: color,
+            name: name,
+            units: units,
+          ),
+        );
+      },
+    ));
+  }
+
   /// This information includes the icon, name, and color for the [Category].
   @override
   // This `context` parameter describes the location of this widget in the
@@ -54,14 +85,12 @@ class Category extends StatelessWidget {
           splashColor: color,
           // We can use either the () => function() or the () { function(); }
           // syntax.
-          onTap: () {
-            print('I was tapped!');
-          },
+          onTap: () => _navigateToConverter(context),
           child: Padding(
             padding: EdgeInsets.all(8.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
+              children: [
                 Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Icon(
