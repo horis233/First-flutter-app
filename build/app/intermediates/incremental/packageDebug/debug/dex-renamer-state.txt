@@ -1,4 +1,0 @@
-#Sat Aug 04 12:07:12 EDT 2018
-base.0=/home/horis/Documents/MY PROJECTS/fullter-app/build/app/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex
