@@ -1,4 +1,4 @@
-package com.yourcompany.task02categorywidget;
+package com.horis.unitConversion;
 
 import android.os.Bundle;
 

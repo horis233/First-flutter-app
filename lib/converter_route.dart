@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import 'package:flutter_app/unit.dart';
+import 'unit.dart';
+
 const _padding = EdgeInsets.all(16.0);
 
-/// Converter screen where users can input amounts to convert.
-///
-/// Currently, it just displays a list of mock units.
+/// [ConverterRoute] where users can input amounts to convert in one [Unit]
+/// and retrieve the conversion in another [Unit] for a specific [Category].
 ///
 /// While it is named ConverterRoute, a more apt name would be ConverterScreen,
 /// because it is responsible for the UI at the route's destination.
@@ -25,10 +25,10 @@ class ConverterRoute extends StatefulWidget {
     @required this.name,
     @required this.color,
     @required this.units,
-  })
-      : assert(name != null),
+  })  : assert(name != null),
         assert(color != null),
         assert(units != null);
+
   @override
   _ConverterRouteState createState() => _ConverterRouteState();
 }
@@ -253,4 +253,3 @@ class _ConverterRouteState extends State<ConverterRoute> {
     );
   }
 }
-
