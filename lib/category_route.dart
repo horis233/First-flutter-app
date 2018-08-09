@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-
+import 'api.dart';
 import 'backdrop.dart';
 import 'category.dart';
 import 'category_tile.dart';
@@ -86,6 +86,7 @@ class _CategoryRouteState extends State<CategoryRoute> {
     // assets/data/regular_units.json
     if (_categories.isEmpty) {
       await _retrieveLocalCategories();
+      await _retrieveApiCategory();
     }
   }
 
@@ -119,6 +120,38 @@ class _CategoryRouteState extends State<CategoryRoute> {
       });
       categoryIndex += 1;
     });
+  }
+
+  /// Retrieves a [Category] and its [Unit]s from an API on the web
+  Future<void> _retrieveApiCategory() async {
+    // Add a placeholder while we fetch the Currency category using the API
+    setState(() {
+      _categories.add(Category(
+        name: apiCategory['name'],
+        units: [],
+        color: _baseColors.last,
+        iconLocation: _icons.last,
+      ));
+    });
+    final api = Api();
+    final jsonUnits = await api.getUnits(apiCategory['route']);
+    // If the API errors out or we have no internet connection, this category
+    // remains in placeholder mode (disabled)
+    if (jsonUnits != null) {
+      final units = <Unit>[];
+      for (var unit in jsonUnits) {
+        units.add(Unit.fromJson(unit));
+      }
+      setState(() {
+        _categories.removeLast();
+        _categories.add(Category(
+          name: apiCategory['name'],
+          units: units,
+          color: _baseColors.last,
+          iconLocation: _icons.last,
+        ));
+      });
+    }
   }
 
   /// Function to call when a [Category] is tapped.
